@@ -7,6 +7,7 @@ use App\User;
 use Illuminate\Foundation\Auth\RegistersUsers;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
+use Illuminate\Support\Facades\DB;
 
 class RegisterController extends Controller
 {
@@ -63,6 +64,19 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {
+        //dd($data['selection'] + $data['selection1']);
+        if (array_key_exists('selection', $data)) {
+            DB::table('applicant')->insert([
+                'email' => $data['email'],
+                'lastname' => $data['lname'],
+            ]);
+        } else {
+            DB::table('company')->insert([
+                'email' => $data['email'],
+                'lastname' => $data['lname'],
+                'businessname' => $data['bname'],
+            ]);
+        }
         return User::create([
             'name' => $data['name'],
             'email' => $data['email'],

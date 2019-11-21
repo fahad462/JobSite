@@ -15,6 +15,8 @@
                     @endif
 
                     You are logged in!
+                    {{ var_dump($email) }}
+                    {{ var_dump($email1) }}
                 </div>
             </div>
         </div>
