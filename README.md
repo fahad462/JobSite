@@ -9,4 +9,4 @@ Download <b>jobsite.sql</b> from the root directory or from this link <a href="h
 laravel version 6.x and PHP 7.2
 Database MySQL
 
-Live Link : <a href="https://jobsitetest.000webhostapp.com/">jobsitetest/</a>
+Live Link : <a href="https://jobsitetest.000webhostapp.com/">jobsitetest</a>
